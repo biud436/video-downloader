@@ -2,3 +2,4 @@ node_modules
 res
 locales
 test
+.DS_Store
