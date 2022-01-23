@@ -28,6 +28,9 @@ namespace EntryPoint {
 		output: string[];
 		outputRaw: string;
 		isValidCygwin: boolean;
+
+		// 정의되지 않은 키도 사용 가능
+		[arg: string]: any;
 	}
 
 	export class NoProgramArgumentsError extends Error {
@@ -38,7 +41,9 @@ namespace EntryPoint {
 		}
 	}
 
+	// 터미널의 현재 폴더를 lib 내부로 변경합니다.
 	process.chdir(__dirname);
+
 	export const mainPath = <string>process.cwd().replace(/\\/g, "/");
 
 	export function handleRuntimeVariables(args: ProgramArguments) {
@@ -47,11 +52,6 @@ namespace EntryPoint {
 			/\\/g,
 			"/"
 		);
-
-		// .ts 파일의 리스트가 여기에 담기게 된다.
-		let output = [];
-		let outputRaw;
-		let isValidCygwin = false;
 
 		return new (class {
 			public productName: string = productName;
