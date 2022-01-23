@@ -141,7 +141,6 @@ export class Utils {
 			}
 		);
 
-		// @ts-ignore
 		ffmpeg.stdout.on("data", function (c) {
 			console.log(c);
 		});
@@ -184,7 +183,6 @@ export class Utils {
 			}
 		);
 
-		// @ts-ignore
 		ffmpeg.stdout.on("data", function (c) {
 			console.log(c);
 		});

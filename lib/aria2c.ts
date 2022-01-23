@@ -1,11 +1,17 @@
-var __aria2cPath = "aria2c";
 import cp from "child_process";
+
+const __aria2cPath = "aria2c";
 
 interface IAria2cHeader {
 	referrer: string;
 	userAgent: string;
 	inputFile: string;
 	logFile: string;
+
+	/**
+	 * 정의되지 않은 키도 타입스크립트에서 오류 없이 허용하기 위해 추가하였다.
+	 */
+	[arg: string]: string;
 }
 
 type Aria2cCallback = (error: any, stdout: any, stderr: any) => void;

@@ -9,8 +9,18 @@ import {
 	handleRuntimeVariables,
 } from "./program.arguments";
 
-// 추론
-const argv = minimist(process.argv.slice(2));
+// interface ParsedArgs {
+// 	[arg: string]: any;
+// 	/**
+// 	 * If opts['--'] is true, populated with everything after the --
+// 	 */
+// 	'--'?: string[] | undefined;
+// 	/**
+// 	 * Contains all the arguments that didn't have an option associated with them
+// 	 */
+// 	_: string[];
+// }
+const argv = <minimist.ParsedArgs>minimist(process.argv.slice(2));
 
 namespace EntryPoint {
 	let RUNTIME_VARIABLES: IRuntimeVariables;
@@ -36,10 +46,8 @@ namespace EntryPoint {
 			let result = true;
 			const args = this.argv;
 
-			console.log(args);
-
 			if (!args.videoName || args.videoName === "") {
-				console.warn("node index.js tslist.txt TMP-000");
+				console.warn("Error. The video name is empty. Please check this out.");
 				return (result = false);
 			}
 
@@ -58,7 +66,7 @@ const onReadyEvent = (runtime: IRuntimeVariables, args: ProgramArguments) => {
 	} else if (argv.export) {
 		utils.encodingVideoWindows();
 	} else if (argv.m3u8) {
-		// node index.js tslist.txt XXX-010 --mu38
+		// yarn start tslist.txt XXX-010 --mu38
 		utils.startDownloadFromM3U8();
 	} else {
 		utils.loadTsList();
