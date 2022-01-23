@@ -22,7 +22,7 @@ C:\aria2-1.35.0-win-64bit-build1\aria2c.exe
 그리고 최신 `Node.js`를 설치해야 합니다. 설치한 직후, 이 프로젝트를 복제(clone)해주세요. 그리고 루트 폴더까지 이동한 후 다음과 같은 명령을 호출해주세요.
 
 ```
-npm install
+yarn install
 ```
 
 이렇게 하면 필요한 모든 라이브러리가 설치됩니다. 단독(Standard Alone) 프로그램으로 빌드하려면, Webpack을 사용하여 번들링을 해야 하기 때문에 먼저 `build.bat` 파일을 실행해야 합니다. 그 후, `makeExeFile.bat` 파일을 실행하면 `bin` 폴더에 다운로더가 생성됩니다.
@@ -51,6 +51,7 @@ yarn start tslist.txt PRODUCT_NAME --export
 
 ```sh
 brew install node
+brew install yarn
 brew install aria2
 brew install ffmpeg
 ```
