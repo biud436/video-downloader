@@ -1,4 +1,9 @@
 namespace EntryPoint {
+	/**
+	 * @class ProgramArguments
+	 * @description
+	 * 이 클래스는 프로그램 인자를 타입스크립트에서 타입 별로 읽을 수 있게 파싱하고 처리하는 기능을 합니다.
+	 */
 	export class ProgramArguments {
 		public tslist: string;
 		public videoName: string;
@@ -22,6 +27,11 @@ namespace EntryPoint {
 		}
 	}
 
+	/**
+	 * @interface IRuntimeVariables
+	 * @description
+	 * 프로세스 런타임 중에 사용되는 변수 목록입니다.
+	 */
 	export interface IRuntimeVariables {
 		productName: string;
 		outputPath: string;
@@ -33,6 +43,14 @@ namespace EntryPoint {
 		[arg: string]: any;
 	}
 
+	/**
+	 * @class NoProgramArgumentsError
+	 * @description
+	 * 중요한 프로그램 인자가 비어있을 때 발생하는 오류입니다.
+	 * 예를 들면, 저장하고자 하는 영상 파일 명을 적지 않았을 때 생깁니다.
+	 * 영상 파일명을 임시로 만들어서 오류를 처리하지 않을 수도 있으나,
+	 * 설계상 그런 처리는 하지 않고 있으며 오류를 내 영상 제목을 반드시 입력하도록 유도하고 있습니다.
+	 */
 	export class NoProgramArgumentsError extends Error {
 		public static MESSAGE = "프로그램 커맨드 라인 매개변수를 입력해주세요.";
 
