@@ -47,7 +47,7 @@ yarn start tslist.txt PRODUCT_NAME --export
 
 # macOS Monterey
 
-`brew`로 다음 세 개의 패키지를 설치하고 터미널을 재실행하세요.
+`brew`로 다음 패키지를 설치하고 터미널을 재실행하세요.
 
 ```sh
 brew install node
@@ -63,3 +63,7 @@ yarn install
 ```
 
 실행 방법은 동일합니다.
+
+```bash
+yarn start tslist.txt PRODUCT_NAME
+```
