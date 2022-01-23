@@ -45,16 +45,17 @@ export class Utils {
 	 * concat.list 파일을 생성합니다.
 	 */
 	createConcatList() {
-		var tslist = fs.readdirSync(this.runtime.outputPath.replace(/\\/g, "/"));
-		var matched = /seg-([0-9]+)-v1-a1.ts/i;
-		var list = [];
-		var max = 0;
-		var data = "";
-		var found = false;
+		const tslist = fs.readdirSync(this.runtime.outputPath.replace(/\\/g, "/"));
+		const matched = /seg-([0-9]+)-v1-a1.ts/i;
+		const list = [];
+		let max = 0;
+		let data = "";
+		let found = false;
 
 		tslist.forEach((e) => {
-			if (matched.exec(e)) {
-				var n = Number(RegExp.$1);
+			const regExpExecArray = <RegExpExecArray>matched.exec(e);
+			if (regExpExecArray) {
+				const n = Number(regExpExecArray[1]);
 				if (n > max) {
 					max = n;
 				}
@@ -66,7 +67,7 @@ export class Utils {
 		}
 
 		if (found) {
-			for (var i = 1; i <= max; i++) {
+			for (let i = 1; i <= max; i++) {
 				if (
 					fs.existsSync(path.join(this.runtime.outputPath, `seg-${i}-v1-a1.ts`))
 				) {
