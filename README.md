@@ -1,8 +1,8 @@
 # 소개
 
-특정 사이트의 영상을 내려 받는 용도의 프로그램입니다.
+특정 사이트의 영상을 고속으로 내려 받는 용도의 프로그램입니다.
 
-# Windows 10
+# Windows
 
 1. 크롬 확장 프로그램 `Tampermonkey`를 다운로드 받은 후, 새로운 유저 스크립트를 만들고 `lib/DownloadTSList.user.js`의 내용을 붙여 넣으십시오.
 
@@ -45,7 +45,7 @@ yarn start tslist.txt PRODUCT_NAME
 yarn start tslist.txt PRODUCT_NAME --export
 ```
 
-# macOS Big Sur
+# macOS Monterey
 
 `brew`로 다음 세 개의 패키지를 설치하고 터미널을 재실행하세요.
 
