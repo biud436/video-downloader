@@ -1,29 +1,30 @@
 {
-  "name": "injector",
-  "version": "1.0.0",
-  "description": "This tool executes the download script",
-  "main": "lib/index.js",
-  "directories": {
-    "lib": "lib",
-    "test": "test"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "minimist": "^1.2.5",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
-  },
-  "dependencies": {
-    "@types/fs-extra": "^9.0.13",
-    "@types/minimist": "^1.2.2",
-    "@types/node": "^17.0.10",
-    "fs-extra": "^9.0.1",
-    "ts-node": "^10.4.0",
-    "tsc": "^2.0.4",
-    "typescript": "^4.5.5"
-  }
+	"name": "injector",
+	"version": "1.0.0",
+	"description": "This tool executes the download script",
+	"main": "lib/index.js",
+	"directories": {
+		"lib": "lib",
+		"test": "test"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "ts-node ./lib/index.ts"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"minimist": "^1.2.5",
+		"webpack": "^4.41.5",
+		"webpack-cli": "^3.3.10"
+	},
+	"dependencies": {
+		"@types/fs-extra": "^9.0.13",
+		"@types/minimist": "^1.2.2",
+		"@types/node": "^17.0.10",
+		"fs-extra": "^9.0.1",
+		"ts-node": "^10.4.0",
+		"tsc": "^2.0.4",
+		"typescript": "^4.5.5"
+	}
 }

@@ -36,6 +36,8 @@ namespace EntryPoint {
 			let result = true;
 			const args = this.argv;
 
+			console.log(args);
+
 			if (!args.videoName || args.videoName === "") {
 				console.warn("node index.js tslist.txt TMP-000");
 				return (result = false);
@@ -64,7 +66,7 @@ const onReadyEvent = (runtime: IRuntimeVariables, args: ProgramArguments) => {
 };
 
 const entryPoint = new EntryPoint.Application(
-	<ProgramArguments>(<unknown>minimist(process.argv.slice(2)))
+	new ProgramArguments(<unknown>minimist(process.argv.slice(2)))
 );
 entryPoint.on("ready", onReadyEvent);
 entryPoint.start();

@@ -32,7 +32,7 @@ npm install
 3. `lib` 폴더로 파일을 복사하고 명령 프롬프트에서 아래와 같이 적어야 합니다. 단독 프로그램으로 빌드하였을 경우, (`node index.js` 부분을 프로그램 명으로 대체해야 합니다)
 
 ```cmd
-node index.js tslist.txt PRODUCT_NAME
+yarn start tslist.txt PRODUCT_NAME
 ```
 
 마지막으로 다운로드가 완료된 파일은 `mklink /d` 옵션을 이용하여 바로가기 링크를 만들면 파일을 쉽게 옮길 수 있습니다.
@@ -42,7 +42,7 @@ node index.js tslist.txt PRODUCT_NAME
 누락으로 인해 동영상 인코딩 작업이 시작되지 않았을 경우에는 다음과 같이 `--export` 옵션을 주고 인코딩을 다시 시작할 수 있습니다.
 
 ```cmd
-node index.js tslist.txt PRODUCT_NAME --export
+yarn start tslist.txt PRODUCT_NAME --export
 ```
 
 # macOS Big Sur
@@ -58,7 +58,7 @@ brew install ffmpeg
 깃을 이용하여 저장소를 복제한 후, 터미널에서 다음 명령을 실행하세요.
 
 ```sh
-npm install
+yarn install
 ```
 
 실행 방법은 동일합니다.
