@@ -14,7 +14,7 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"minimist": "^1.2.5",
+		"minimist": "^1.2.6",
 		"webpack": "^4.41.5",
 		"webpack-cli": "^3.3.10"
 	},
