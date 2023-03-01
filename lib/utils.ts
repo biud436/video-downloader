@@ -9,6 +9,7 @@ import {
 	mainPath,
 	ProgramArguments,
 } from "./program.arguments";
+import { moveToVideoFolder } from "./move-file";
 
 declare global {
 	interface String {
@@ -95,6 +96,8 @@ export class Utils {
 			log: path.join(mainPath, "log.txt").replace(/\\/g, "/"),
 			tslist: path.join(mainPath, "tslist.txt").replace(/\\/g, "/"),
 		};
+
+		moveToVideoFolder(path.join(mainPath, this.runtime.productName + ".mp4"));
 
 		if (fs.existsSync(files.input)) fs.removeSync(files.input);
 		if (fs.existsSync(files.log) && !this._isError) fs.removeSync(files.log);
